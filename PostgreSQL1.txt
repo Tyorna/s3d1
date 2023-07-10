@@ -1,0 +1,53 @@
+SELECT descrizione, "dataAttivazione" FROM public.prodotti where "inCommercio" = true or "inProduzione" = true and date_part('year', "dataAttivazione") = '2017';
+16:14:09
+
+SELECT date_part('year', datafattura), COUNT(numerofattura) AS numero_fattura, SUM(importo) FROM public.fatture GROUP BY date_part('year', datafattura);
+16:02:02
+
+SELECT numerofattura FROM public.fatture where iva = 20;
+15:49:21
+
+SELECT nome, cognome FROM public.clienti where date_part('year', datanascita) = '1982';
+15:47:57
+
+--------------
+INSERT INTO public.fornitori( denominazione, "regioneResidenza") VALUES ( 'Denom', 'Piemonte');
+15:36:19
+SELECT numerofattura, tipologia, importo, idcliente, datafattura, numerofornitore, iva FROM public.fatture;
+15:33:15
+INSERT INTO public.fatture( tipologia, importo, idcliente, datafattura, numerofornitore, iva) VALUES ( 'A', 1093, 4, '2009-09-16', 24, 10);
+15:33:12
+INSERT INTO public.fatture( tipologia, importo, idcliente, datafattura, numerofornitore, iva) VALUES ( 'B', 1293, 3, '2017-09-16', 34, 20);
+15:32:51
+INSERT INTO public.fatture( tipologia, importo, idcliente, datafattura, numerofornitore, iva) VALUES ( 'A', 1293, 3, '2017-09-16', 34, 20);
+15:32:42
+INSERT INTO public.fatture( tipologia, importo, idcliente, datafattura, numerofornitore, iva) VALUES ( 'cheneso4', 1293, 3, '2017-09-16', 34, 20);
+15:32:11
+INSERT INTO public.fatture( tipologia, importo, idcliente, datafattura, numerofornitore, iva) VALUES ( 'cheneso3', 1293, 2, '2019-07-06', 34, 10);
+15:31:50
+SELECT "idProdotto", descrizione, "inProduzione", "inCommercio", "dataAttivazione", "dataDisattivazione" FROM public.prodotti;
+15:27:13
+INSERT INTO public.prodotti( descrizione, "inProduzione", "inCommercio", "dataAttivazione", "dataDisattivazione") VALUES ('maglietta', false , true , '2019-10-03', '2022-09-13');
+15:27:01
+SELECT numerofattura, tipologia, importo, idcliente, datafattura, numerofornitore, iva FROM public.fatture;
+15:22:05
+INSERT INTO public.fatture( tipologia, importo, idcliente, datafattura, numerofornitore, iva) VALUES ('cheneso1', 4103, 5, '2009-07-13', 2, 20);
+15:22:01
+SELECT numerofattura, tipologia, importo, idcliente, datafattura, numerofornitore, iva FROM public.fatture;
+15:21:28
+INSERT INTO public.fatture( tipologia, importo, idcliente, datafattura, numerofornitore, iva) VALUES ('cheneso', 1203, 4, '2019-06-03', 3, 10);
+15:21:24
+SELECT numerofattura, tipologia, importo, idcliente, datafattura, numerofornitore, iva FROM public.fatture;
+15:21:08
+SELECT numerofattura, tipologia, importo, idcliente, datafattura, numerofornitore, iva FROM public.fatture;
+15:20:58
+INSERT INTO public.fatture( tipologia, importo, idcliente, datafattura, numerofornitore, iva) VALUES ('cheneso', 1203, 4, , '2019-06-03', 3, 10);
+15:20:49
+SELECT numerocliente, nome, cognome, datanascita, regioneresidenza FROM public.clienti;
+15:11:46
+INSERT INTO clienti( nome, cognome, datanascita, regioneresidenza) VALUES ('Ale', 'Scotti', '1982-08-18', 'Al')
+15:11:43
+SELECT numerocliente, nome, cognome, datanascita, regioneresidenza FROM public.clienti;
+15:11:39
+SELECT numerocliente, nome, cognome, datanascita, regioneresidenza FROM public.clienti;
+15:11:05
